@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/samsonmeseret/CI-CD-app'
+                sh "git clone https://github.com/samsonmeseret/CI-CD-app"
             }
         }
         
