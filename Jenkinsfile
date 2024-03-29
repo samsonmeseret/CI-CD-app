@@ -6,7 +6,7 @@ pipeline {
             steps {
                 sh "rm -rf CI-CD-app"
                 sh "git --version"
-                sh "git clone https://github.com/samsonmeseret/CI-CD-app"
+                sh "git clone https://github.com/samsonmeseret/CI-CD-app.git"
             }
         }
         
