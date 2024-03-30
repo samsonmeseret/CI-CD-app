@@ -25,7 +25,7 @@ pipeline {
         stage('Start Container') {
             steps {
                 // Run the Docker container using the built image
-                sh 'docker run -d -p 5000:5000 ci-cd-api'
+                sh 'docker run -d -p 3000:3000 ci-cd-api'
             }
         }
     }
