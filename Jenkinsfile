@@ -13,10 +13,10 @@ pipeline {
         stage('Build Images') {
             steps {
                 script {
-                    // Navigate to the 'app' directory where your Dockerfile is located
-                    dir('app') {
+                    // Navigate to the 'api' directory where your Dockerfile is located
+                    dir('CI-CD-app/api') {
                         // Build the Docker image for the server API
-                        sh 'docker build -t CI-CD-app/api .'
+                        sh 'docker build -t ci-cd-api .'
                     }
                 }
             }
@@ -25,7 +25,7 @@ pipeline {
         stage('Start Container') {
             steps {
                 // Run the Docker container using the built image
-                sh 'docker run -d -p 5000:5000 CI-CD-app/api'
+                sh 'docker run -d -p 5000:5000 ci-cd-api'
             }
         }
     }
