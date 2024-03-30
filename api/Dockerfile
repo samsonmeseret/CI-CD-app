@@ -1,7 +1,5 @@
 FROM node:20.12-alpine
 
-RUN npm install -g nodemon
-RUN npm install -g pm2
 
 WORKDIR /app
 
@@ -11,6 +9,6 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 5000
+EXPOSE 3000
 
 CMD ["npm", "run", "start"]
