@@ -27,8 +27,6 @@ pipeline {
         stage('Start Container') {
             steps {
                     // Stop and remove existing container if it exists
-                    sh 'docker stop ci-cd-api || true'
-                    sh 'docker rm ci-cd-api || true'
                 // Run the Docker container using the built image
                 sh 'docker run -d -p 3000:3000 ci-cd-api'
             }
